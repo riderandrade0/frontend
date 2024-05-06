@@ -1,0 +1,132 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('img.jpg') center center/cover no-repeat fixed; /* Ajusta la ruta de la imagen */
+    animation: backgroundAnimation 30s infinite alternate; /* Define la animación */
+    color: #f7b4afcb; /* Default color for text */
+    font-size: 25px;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+}
+
+@keyframes backgroundAnimation {
+    0% { filter: brightness(100%); }
+    50% { filter: brightness(120%); }
+    100% { filter: brightness(100%); }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(202, 18, 18, 0.1); /* Fondo semi-transparente */
+    color: #7fb865; /* Color del texto */
+    transition: box-shadow 0.3s ease; /* Transición para el efecto de iluminación */
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #a14747; /* Color de borde más oscuro */
+}
+
+th {
+    background-color: #333; /* Color de fondo más oscuro */
+}
+
+tr:hover {
+    background-color: #312b2b; /* Color de fondo al pasar el mouse */
+    box-shadow: 0 0 10px rgba(247, 73, 73, 0.3); /* Efecto de iluminación */
+}
+/* Estilo para botones */
+button {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #4c93af; /* Color de fondo verde */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Estilo para botón de eliminar */
+button.delete {
+    background-color: #534f4f; /* Color de fondo rojo */
+}
+
+/* Estilo para botón de editar */
+button.edit {
+    background-color: #008CBA; /* Color de fondo azul */
+}
+
+/* Animación de luces secuenciales */
+@keyframes lights {
+    0% { box-shadow: 0 0 20px rgba(247, 246, 246, 0.7); }
+    50% { box-shadow: 0 0 40px rgba(219, 3, 3, 0.7); }
+    100% { box-shadow: 0 0 20px rgba(146, 120, 120, 0.7); }
+}
+
+/* Aplicar animación a los botones */
+button:hover {
+    animation: lights 1.5s infinite;
+}
+/* Estilo para el elemento summary */
+summary {
+    cursor: pointer; /* Cambia el cursor al pasar sobre el summary */
+    padding: 20px; /* Añade espacio alrededor del contenido del summary */
+    background-color: #f0f0f0; /* Color de fondo */
+    border: 1px solid #ccc; /* Borde alrededor del summary */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo para el contenido mostrado cuando se abre el details */
+details[open] summary {
+    background-color: #ddd; /* Cambia el color de fondo cuando el details está abierto */
+}
+
+/* Estilo para el contenido dentro del summary */
+summary::marker {
+    color: blue; /* Cambia el color del marcador de lista */
+}
+
+/* Estilo para el contenido dentro del summary */
+summary::before {
+    content: "+"; /* Añade un símbolo antes del texto del summary */
+    margin-right: 5px; /* Añade espacio entre el símbolo y el texto */
+}
+
+/* Estilo para el contenido dentro del summary cuando está abierto */
+details[open] summary::before {
+    content: "-"; /* Cambia el símbolo cuando el details está abierto */
+}
+.fondo-personalizado {
+    background-image: url('imagen.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    min-height: 0vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* styles.css */
+
+@keyframes move {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.container {
+    text-align: center; /* Center the content horizontally */
+}
+
+h2 {
+    animation: move 2s infinite; /* Apply the animation to h2 elements */
+}
